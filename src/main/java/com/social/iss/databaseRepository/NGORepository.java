@@ -1,20 +1,10 @@
 package com.social.iss.databaseRepository;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.social.iss.dataModel.NGO;
+import org.springframework.data.repository.CrudRepository;
 
-public class NGORepository {
-
-public NGORepository()
-{
-	
+public interface NGORepository extends CrudRepository<NGO, Integer> {
 }
 
-public List<String> getNGOs()
-{
-	List<String>ngosList=new ArrayList<>();
-	ngosList.add("sarvahitey");
-	ngosList.add("milaap");
-	return ngosList;
-}
-}
+
+
