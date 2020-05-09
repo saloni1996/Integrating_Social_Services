@@ -11,13 +11,15 @@ public class NGOViewModel {
 	@Autowired
 	NGORepository ngoRepository;
 
+	@Autowired
+	NGO ngo;
+
 	public Iterable<NGO> getListOfAllNGO()
 	{
 		return ngoRepository.findAll();
 	}
 
 	public String addListOfNGO(String name, String email) {
-		NGO ngo = new NGO();
 		ngo.setName(name);
 		ngo.setEmail(email);
 		ngoRepository.save(ngo);
