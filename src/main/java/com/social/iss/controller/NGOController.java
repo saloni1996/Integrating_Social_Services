@@ -8,6 +8,8 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/ngo")
 @Api(value="Employee Management System", description="Operations pertaining to employee in Employee Management System")
@@ -27,6 +29,12 @@ public class NGOController {
 	@GetMapping(value = "/getNGOS")
 	public Iterable<NGO> getNGOS() {
 		return ngoViewModel.getListOfAllNGO();
+	}
+
+	@ApiOperation(value = "Return NGO details if the name matches the input string")
+	@GetMapping(value= "/getNGObyName")
+	public List<NGO> getNGObyName(@RequestParam String ngoName) {
+		return ngoViewModel.getNgoByName(ngoName);
 	}
 
 
