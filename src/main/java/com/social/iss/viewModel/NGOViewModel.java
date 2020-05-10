@@ -1,7 +1,7 @@
 package com.social.iss.viewModel;
 
 import com.social.iss.dataModel.NGO;
-import com.social.iss.databaseRepository.NGORepository;
+import com.social.iss.databaseRepositories.NGORepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
