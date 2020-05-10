@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/ngo")
-@Api(value="Employee Management System", description="Operations pertaining to employee in Employee Management System")
+@Api(value="NGO management system", description="Operations pertaining to managing and fetching details of NGO in NGO Management System")
 public class NGOController {
 
 	@Autowired
@@ -36,6 +36,4 @@ public class NGOController {
 	public List<NGO> getNGObyName(@RequestParam String ngoName) {
 		return ngoViewModel.getNgoByName(ngoName);
 	}
-
-
 }
