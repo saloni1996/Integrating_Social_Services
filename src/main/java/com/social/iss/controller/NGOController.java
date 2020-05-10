@@ -21,8 +21,10 @@ public class NGOController {
 	@ApiOperation(value = "Adds list of Ngo's")
 	@PostMapping(value = "/addNGOS")
 	public @ResponseBody String addNGOS(@RequestParam String name
-			, @RequestParam String email) {
-		return ngoViewModel.addListOfNGO(name, email);
+			, @RequestParam String email,@RequestParam String phoneNumber,
+			 @RequestParam String address,@RequestParam String description,
+			 @RequestParam String latitude,@RequestParam String longitude) {
+		return ngoViewModel.addListOfNGO(name, email,phoneNumber,address,description,latitude,longitude);
 	}
 
 	@ApiOperation(value = "Returns List of all Ngo's")

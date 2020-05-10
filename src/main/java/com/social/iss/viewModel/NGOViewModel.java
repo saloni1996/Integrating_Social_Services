@@ -19,10 +19,15 @@ public class NGOViewModel {
 		return ngoRepository.findAll();
 	}
 
-	public String addListOfNGO(String name, String email) {
+	public String addListOfNGO(String name, String email, String phoneNumber, String address, String description, String latitude, String longitude) {
 		NGO ngo = new NGO();
 		ngo.setName(name);
 		ngo.setEmail(email);
+		ngo.setPhoneNumber(phoneNumber);
+		ngo.setAddress(address);
+		ngo.setDescription(description);
+		ngo.setLatitude(latitude);
+		ngo.setLongitude(longitude);
 		ngoRepository.save(ngo);
 		return "Success";
 	}
