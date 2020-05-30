@@ -1,6 +1,6 @@
 package com.social.iss.dataModel;
 
-public enum Event_type {
+public enum Event_Type {
     CLOTHING,
     FOOD,
     EDUCATION

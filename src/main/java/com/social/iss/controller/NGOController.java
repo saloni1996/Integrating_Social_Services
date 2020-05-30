@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/ngo")
-@Api(value="NGO management system", description="Operations pertaining to managing and fetching details of NGO in NGO Management System")
+@Api(value="NGO management")
 public class NGOController {
 
 	@Autowired

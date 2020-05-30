@@ -15,7 +15,7 @@ public class Event {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
     private String name;
-    private Event_type eventType;
+    private Event_Type eventType;
     private String description;
     private java.util.Date endDate;
     private java.util.Date startDate;
@@ -37,11 +37,11 @@ public class Event {
         this.name = name;
     }
 
-    public Event_type getEventType() {
+    public Event_Type getEventType() {
         return eventType;
     }
 
-    public void setEventType(Event_type eventType) {
+    public void setEventType(Event_Type eventType) {
         this.eventType = eventType;
     }
 
