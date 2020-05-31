@@ -31,8 +31,8 @@ public class EventController {
     public @ResponseBody
     String addEvent(@RequestParam String eventName
             , @RequestParam Event_Type eventType, @RequestParam String description,
-                    @RequestParam Date startDate, @RequestParam Date endDate, @RequestParam Integer id) {
-        return eventViewModel.addEvent(eventName, eventType,description,startDate,endDate, id);
+                    @RequestParam Date startDate, @RequestParam Date endDate, @RequestParam Integer ngoId) {
+        return eventViewModel.addEvent(eventName, eventType,description,startDate,endDate, ngoId);
     }
 
     @ApiOperation(value = "list of all events")
@@ -67,7 +67,7 @@ public class EventController {
     }
 
     @ApiOperation(value = "delete an event whose id is given")
-    @GetMapping(value = "/deleteEvent")
+    @DeleteMapping(value = "/deleteEvent")
     public @ResponseBody String deleteEvent(@RequestParam Integer eventId) {
         return eventViewModel.deleteEntity(eventId);
     }
